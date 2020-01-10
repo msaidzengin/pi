@@ -4,7 +4,6 @@ with open(r"result1m.json", "r") as read_file:
     phones = json.load(read_file)
 
 
-search = '5559991122'
-for phone in phones:
-    if search == phone['phone']:
-        print('found', phone)
+with open("result2.txt", "w") as text_file:
+    for i in phones:
+        text_file.write(i['phone'] + ' ' + str(i['index']) + '\n')
