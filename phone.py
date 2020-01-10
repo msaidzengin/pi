@@ -12,4 +12,8 @@ mp.dps = 100000
 pi = str(mp.pi)
 
 cepTelefonlari = turkTelekom + turkcell + vodafone
-print(cepTelefonlari)
+
+for i in range(2, len(pi) - 15):
+    if int(pi[i:i+3]) in cepTelefonlari:
+        print(pi[i:i+10], i)
+
